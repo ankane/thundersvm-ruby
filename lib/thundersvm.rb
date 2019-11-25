@@ -15,7 +15,15 @@ module ThunderSVM
   class << self
     attr_accessor :ffi_lib
   end
-  self.ffi_lib = ["libthundersvm.so", "libthundersvm.dylib", "thundersvm.dll"]
+  self.ffi_lib =
+    if Gem.win_platform?
+      ["thundersvm.dll"]
+    elsif RbConfig::CONFIG["host_os"] =~ /darwin/i
+      ["libthundersvm.dylib"]
+    else
+      vendor_lib = File.expand_path("../vendor/libthundersvm.so", __dir__)
+      ["libthundersvm.so", vendor_lib]
+    end
 
   # friendlier error message
   autoload :FFI, "thundersvm/ffi"
