@@ -1,4 +1,5 @@
 # stdlib
+require "ffi"
 require "fiddle/import"
 require "fileutils"
 require "tempfile"
