@@ -76,19 +76,19 @@ Defaults shown below
 
 ```ruby
 ThunderSVM::Model.new(
-  svm_type: :c_svc,    # set type of SVM (c_svc, nu_svc, one_class, epsilon_svr, nu_svr)
-  kernel: :rbf,        # set type of kernel function (linear, polynomial, rbf, sigmoid)
-  degree: 3,           # set degree in kernel function
-  gamma: nil,          # set gamma in kernel function
-  coef0: 0,            # set coef0 in kernel function
-  c: 1,                # set the parameter C of C-SVC, epsilon-SVR, and nu-SVR
-  nu: 0.5,             # set the parameter nu of nu-SVC, one-class SVM, and nu-SVR
-  epsilon: 0.1,        # set the epsilon in loss function of epsilon-SVR
+  svm_type: :c_svc,    # type of SVM (c_svc, nu_svc, one_class, epsilon_svr, nu_svr)
+  kernel: :rbf,        # type of kernel function (linear, polynomial, rbf, sigmoid)
+  degree: 3,           # degree in kernel function
+  gamma: nil,          # gamma in kernel function
+  coef0: 0,            # coef0 in kernel function
+  c: 1,                # parameter C of C-SVC, epsilon-SVR, and nu-SVR
+  nu: 0.5,             # parameter nu of nu-SVC, one-class SVM, and nu-SVR
+  epsilon: 0.1,        # epsilon in loss function of epsilon-SVR
   max_memory: 8192,    # constrain the maximum memory size (MB) that thundersvm uses
-  tolerance: 0.001,    # set tolerance of termination criterion
+  tolerance: 0.001,    # tolerance of termination criterion
   probability: false,  # whether to train a SVC or SVR model for probability estimates
   gpu: 0,              # specify which gpu to use
-  cores: nil,          # set the number of cpu cores to use (defaults to all)
+  cores: nil,          # number of cpu cores to use (defaults to all)
   verbose: false       # verbose mode
 )
 ```
