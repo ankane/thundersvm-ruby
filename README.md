@@ -139,10 +139,10 @@ ThunderSVM.ffi_lib << "path/to/build/lib/libthundersvm.so"
 
 ### Mac
 
-Install gcc
+Install dependencies:
 
 ```sh
-brew install gcc
+brew install cmake gcc
 ```
 
 And run:
