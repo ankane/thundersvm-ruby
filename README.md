@@ -10,7 +10,7 @@ For a great intro on support vector machines, check out [this video](https://www
 
 ## Installation
 
-First, [install ThunderSVM](https://github.com/Xtra-Computing/thundersvm/blob/master/docs/how-to.md#install-thundersvm). Add this line to your application’s Gemfile:
+First, [install ThunderSVM](#thundersvm-installation). Add this line to your application’s Gemfile:
 
 ```ruby
 gem 'thundersvm'
@@ -115,6 +115,56 @@ Or the path a file in `libsvm` format (better for sparse data)
 model.fit("train.txt")
 model.predict("test.txt")
 ```
+
+## ThunderSVM Installation
+
+### Linux
+
+```sh
+git clone --recursive --branch 0.3.3 https://github.com/Xtra-Computing/thundersvm
+cd thundersvm
+mkdir build
+cd build
+cmake -DUSE_CUDA=OFF -DUSE_EIGEN=ON ..
+make
+```
+
+For CUDA, remove the `cmake` flags.
+
+Specify the path to the shared library with:
+
+```ruby
+ThunderSVM.ffi_lib << "path/to/build/lib/libthundersvm.so"
+```
+
+### Mac
+
+Install gcc
+
+```sh
+brew install gcc
+```
+
+And run:
+
+```sh
+git clone --recursive --branch 0.3.3 https://github.com/Xtra-Computing/thundersvm
+cd thundersvm
+mkdir build
+cd build
+cmake -DUSE_CUDA=OFF -DUSE_EIGEN=ON -DCMAKE_C_COMPILER=gcc-9 -DCMAKE_CXX_COMPILER=g++-9 ..
+make
+```
+
+Specify the path to the shared library with:
+
+```ruby
+ThunderSVM.ffi_lib << "path/to/build/lib/libthundersvm.dylib"
+```
+
+### Windows
+
+Follow the [official instructions](https://thundersvm.readthedocs.io/en/latest/get-started.html#installation-for-windows).
 
 ## Resources
 
