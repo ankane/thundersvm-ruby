@@ -1,0 +1,16 @@
+dist: xenial
+language: ruby
+rvm: 2.6.3
+before_install:
+  - export THUNDERSVM_VERSION=0.3.3
+  - ./test/ci/install_thundersvm.sh
+  - export LD_LIBRARY_PATH=$HOME/thundersvm/$THUNDERSVM_VERSION/build/lib:$LD_LIBRARY_PATH
+cache:
+  bundler: true
+  directories:
+    - $HOME/thundersvm
+script: bundle exec rake test
+notifications:
+  email:
+    on_success: never
+    on_failure: change

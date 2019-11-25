@@ -6,6 +6,8 @@
 
 For a great intro on support vector machines, check out [this video](https://www.youtube.com/watch?v=efR1C6CvhmE).
 
+[![Build Status](https://travis-ci.org/ankane/thundersvm.svg?branch=master)](https://travis-ci.org/ankane/thundersvm)
+
 ## Installation
 
 First, [install ThunderSVM](https://github.com/Xtra-Computing/thundersvm/blob/master/docs/how-to.md#install-thundersvm). Add this line to your application’s Gemfile:
