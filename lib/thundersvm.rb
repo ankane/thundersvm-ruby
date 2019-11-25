@@ -17,7 +17,8 @@ module ThunderSVM
   end
   self.ffi_lib =
     if Gem.win_platform?
-      ["thundersvm.dll"]
+      vendor_lib = File.expand_path("../vendor/thundersvm.dll", __dir__)
+      ["thundersvm.dll", vendor_lib]
     elsif RbConfig::CONFIG["host_os"] =~ /darwin/i
       ["libthundersvm.dylib"]
     else
