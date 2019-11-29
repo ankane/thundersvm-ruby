@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = ThunderSVM::VERSION
   spec.summary       = "ThunderSVM - high-performance parallel SVMs - for Ruby"
   spec.homepage      = "https://github.com/ankane/thundersvm"
-  spec.license       = "MIT"
+  spec.license       = "Apache-2.0"
 
   spec.author        = "Andrew Kane"
   spec.email         = "andrew@chartkick.com"
