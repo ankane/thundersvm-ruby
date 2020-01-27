@@ -1,6 +1,6 @@
 # ThunderSVM
 
-[ThunderSVM](https://github.com/Xtra-Computing/thundersvm) - high-performance parallel SVMs - for Ruby
+[ThunderSVM](https://github.com/Xtra-Computing/thundersvm) - high performance parallel SVMs - for Ruby
 
 :fire: Uses GPUs and multi-core CPUs for blazing performance
 

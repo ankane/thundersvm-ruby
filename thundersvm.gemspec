@@ -3,7 +3,7 @@ require_relative "lib/thundersvm/version"
 Gem::Specification.new do |spec|
   spec.name          = "thundersvm"
   spec.version       = ThunderSVM::VERSION
-  spec.summary       = "ThunderSVM - high-performance parallel SVMs - for Ruby"
+  spec.summary       = "High performance parallel SVMs for Ruby"
   spec.homepage      = "https://github.com/ankane/thundersvm"
   spec.license       = "Apache-2.0"
 
