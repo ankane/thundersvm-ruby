@@ -2,9 +2,9 @@ module ThunderSVM
   module FFI
     extend Fiddle::Importer
 
-    libs = ThunderSVM.ffi_lib.dup
+    libs = Array(ThunderSVM.ffi_lib).dup
     begin
-      dlload libs.shift
+      dlload Fiddle.dlopen(libs.shift)
     rescue Fiddle::DLError => e
       retry if libs.any?
       raise e if ENV["THUNDERSVM_DEBUG"]
