@@ -10,7 +10,7 @@ For a great intro on support vector machines, check out [this video](https://www
 
 ## Installation
 
-First, [install ThunderSVM](#thundersvm-installation). Add this line to your application’s Gemfile:
+Add this line to your application’s Gemfile:
 
 ```ruby
 gem 'thundersvm'
@@ -116,55 +116,34 @@ model.fit("train.txt")
 model.predict("test.txt")
 ```
 
-## ThunderSVM Installation
+## GPUs
+
+To run ThunderSVM on GPUs, you’ll need to build the library from source.
 
 ### Linux
 
 ```sh
-git clone --recursive --branch 0.3.3 https://github.com/Xtra-Computing/thundersvm
+git clone --recursive --branch v0.3.4 https://github.com/Xtra-Computing/thundersvm
 cd thundersvm
 mkdir build
 cd build
-cmake -DUSE_CUDA=OFF -DUSE_EIGEN=ON ..
-make
-```
-
-For CUDA, remove the `cmake` flags.
-
-Specify the path to the shared library with:
-
-```ruby
-ThunderSVM.ffi_lib << "path/to/build/lib/libthundersvm.so"
-```
-
-### Mac
-
-Install dependencies:
-
-```sh
-brew install cmake gcc
-```
-
-And run:
-
-```sh
-git clone --recursive --branch 0.3.3 https://github.com/Xtra-Computing/thundersvm
-cd thundersvm
-mkdir build
-cd build
-cmake -DUSE_CUDA=OFF -DUSE_EIGEN=ON -DCMAKE_C_COMPILER=gcc-9 -DCMAKE_CXX_COMPILER=g++-9 ..
+cmake ..
 make
 ```
 
 Specify the path to the shared library with:
 
 ```ruby
-ThunderSVM.ffi_lib << "path/to/build/lib/libthundersvm.dylib"
+ThunderSVM.ffi_lib = "path/to/build/lib/libthundersvm.so"
 ```
 
 ### Windows
 
-Follow the [official instructions](https://thundersvm.readthedocs.io/en/latest/get-started.html#installation-for-windows).
+Follow the [official instructions](https://thundersvm.readthedocs.io/en/latest/get-started.html#installation-for-windows). Specify the path to the shared library with:
+
+```ruby
+ThunderSVM.ffi_lib = "path/to/build/lib/libthundersvm.dll"
+```
 
 ## Resources
 
