@@ -1,4 +1,4 @@
-## 0.1.2 (unreleased)
+## 0.1.2 (2020-02-09)
 
 - Fixed illegal instruction error on some Linux platforms
 
