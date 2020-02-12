@@ -7,8 +7,7 @@ module ThunderSVM
       dlload Fiddle.dlopen(libs.shift)
     rescue Fiddle::DLError => e
       retry if libs.any?
-      raise e if ENV["THUNDERSVM_DEBUG"]
-      raise LoadError, "Could not find ThunderSVM"
+      raise e
     end
 
     extern "void thundersvm_train(int argc, char **argv)"

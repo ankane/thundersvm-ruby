@@ -1,3 +1,7 @@
+## 0.1.3 (unreleased)
+
+- Fixed `Could not find ThunderSVM` error on some Linux platforms
+
 ## 0.1.2 (2020-02-09)
 
 - Fixed illegal instruction error on some Linux platforms
