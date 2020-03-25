@@ -148,6 +148,7 @@ ThunderSVM.ffi_lib = "path/to/build/lib/libthundersvm.dll"
 ## Resources
 
 - [ThunderSVM: A Fast SVM Library on GPUs and CPUs](https://github.com/Xtra-Computing/thundersvm/blob/master/thundersvm-full.pdf)
+- [A Practical Guide to Support Vector Classification](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
 
 ## History
 
