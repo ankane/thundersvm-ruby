@@ -16,6 +16,12 @@ Add this line to your application’s Gemfile:
 gem 'thundersvm'
 ```
 
+On Mac, also install OpenMP:
+
+```sh
+brew install libomp
+```
+
 ## Getting Started
 
 Prep your data

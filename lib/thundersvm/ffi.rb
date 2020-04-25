@@ -7,7 +7,12 @@ module ThunderSVM
       dlload Fiddle.dlopen(libs.shift)
     rescue Fiddle::DLError => e
       retry if libs.any?
-      raise e
+
+      if e.message.include?("Library not loaded: /usr/local/opt/libomp/lib/libomp.dylib") && e.message.include?("Reason: image not found")
+        raise Fiddle::DLError, "OpenMP not found. Run `brew install libomp`"
+      else
+        raise e
+      end
     end
 
     extern "void thundersvm_train(int argc, char **argv)"

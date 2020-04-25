@@ -1,3 +1,7 @@
+## 0.1.4 (unreleased)
+
+- Improved error message when OpenMP not found on Mac
+
 ## 0.1.3 (2020-02-11)
 
 - Fixed `Could not find ThunderSVM` error on some Linux platforms
