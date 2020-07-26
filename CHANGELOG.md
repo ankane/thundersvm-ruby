@@ -1,4 +1,4 @@
-## 0.1.4 (unreleased)
+## 0.1.4 (2020-07-26)
 
 - Improved error message when OpenMP not found on Mac
 
