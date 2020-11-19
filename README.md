@@ -6,7 +6,7 @@
 
 For a great intro on support vector machines, check out [this video](https://www.youtube.com/watch?v=efR1C6CvhmE).
 
-[![Build Status](https://travis-ci.org/ankane/thundersvm.svg?branch=master)](https://travis-ci.org/ankane/thundersvm)
+[![Build Status](https://github.com/ankane/thundersvm/workflows/build/badge.svg?branch=master)](https://github.com/ankane/thundersvm/actions)
 
 ## Installation
 
