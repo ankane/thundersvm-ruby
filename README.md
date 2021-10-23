@@ -1,4 +1,4 @@
-# ThunderSVM
+# ThunderSVM Ruby
 
 [ThunderSVM](https://github.com/Xtra-Computing/thundersvm) - high performance parallel SVMs - for Ruby
 
@@ -6,7 +6,7 @@
 
 For a great intro on support vector machines, check out [this video](https://www.youtube.com/watch?v=efR1C6CvhmE).
 
-[![Build Status](https://github.com/ankane/thundersvm/workflows/build/badge.svg?branch=master)](https://github.com/ankane/thundersvm/actions)
+[![Build Status](https://github.com/ankane/thundersvm-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/thundersvm-ruby/actions)
 
 ## Installation
 
@@ -158,22 +158,22 @@ ThunderSVM.ffi_lib = "path/to/build/lib/libthundersvm.dll"
 
 ## History
 
-View the [changelog](https://github.com/ankane/thundersvm/blob/master/CHANGELOG.md)
+View the [changelog](https://github.com/ankane/thundersvm-ruby/blob/master/CHANGELOG.md)
 
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ankane/thundersvm/issues)
-- Fix bugs and [submit pull requests](https://github.com/ankane/thundersvm/pulls)
+- [Report bugs](https://github.com/ankane/thundersvm-ruby/issues)
+- Fix bugs and [submit pull requests](https://github.com/ankane/thundersvm-ruby/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development:
 
 ```sh
-git clone https://github.com/ankane/thundersvm.git
-cd thundersvm
+git clone https://github.com/ankane/thundersvm-ruby.git
+cd thundersvm-ruby
 bundle install
 bundle exec rake test
 ```
