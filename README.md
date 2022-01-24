@@ -13,7 +13,7 @@ For a great intro on support vector machines, check out [this video](https://www
 Add this line to your application’s Gemfile:
 
 ```ruby
-gem 'thundersvm'
+gem "thundersvm"
 ```
 
 On Mac, also install OpenMP:
