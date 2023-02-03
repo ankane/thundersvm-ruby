@@ -13,7 +13,7 @@ def download_file(file)
   url = "https://github.com/ankane/ml-builds/releases/download/thundersvm-0.3.4/#{file}"
   puts "Downloading #{file}..."
   dest = "vendor/#{file}"
-  File.binwrite(dest, URI.open(url).read)
+  File.binwrite(dest, URI.parse(url).read)
   puts "Saved #{dest}"
 end
 
