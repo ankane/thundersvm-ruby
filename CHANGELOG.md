@@ -1,4 +1,4 @@
-## 0.2.0 (unreleased)
+## 0.2.0 (2023-04-16)
 
 - Added shared library for Mac ARM
 - Dropped support for Ruby < 3
