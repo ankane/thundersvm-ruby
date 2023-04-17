@@ -26,9 +26,13 @@ namespace :vendor do
     download_file("libthundersvm.dylib")
   end
 
+  task :mac_arm do
+    download_file("libthundersvm.arm64.dylib")
+  end
+
   task :windows do
     download_file("thundersvm.dll")
   end
 
-  task all: [:linux, :mac, :windows]
+  task all: [:linux, :mac, :mac_arm, :windows]
 end
