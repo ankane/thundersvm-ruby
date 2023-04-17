@@ -19,7 +19,7 @@ module ThunderSVM
     if Gem.win_platform?
       "thundersvm.dll"
     elsif RbConfig::CONFIG["host_os"] =~ /darwin/i
-      if RbConfig::CONFIG["host_cpu"] == "arm64"
+      if RbConfig::CONFIG["host_cpu"] =~ /arm|aarch64/i
         "libthundersvm.arm64.dylib"
       else
         "libthundersvm.dylib"
