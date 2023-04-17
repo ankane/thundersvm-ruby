@@ -1,6 +1,7 @@
-## 0.1.5 (unreleased)
+## 0.2.0 (unreleased)
 
 - Added shared library for Mac ARM
+- Dropped support for Ruby < 3
 
 ## 0.1.4 (2020-07-26)
 
