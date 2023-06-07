@@ -4,10 +4,10 @@ require "fileutils"
 require "tempfile"
 
 # modules
-require "thundersvm/model"
-require "thundersvm/classifier"
-require "thundersvm/regressor"
-require "thundersvm/version"
+require_relative "thundersvm/model"
+require_relative "thundersvm/classifier"
+require_relative "thundersvm/regressor"
+require_relative "thundersvm/version"
 
 module ThunderSVM
   class Error < StandardError; end
