@@ -6,7 +6,7 @@
 
 For a great intro on support vector machines, check out [this video](https://www.youtube.com/watch?v=efR1C6CvhmE).
 
-[![Build Status](https://github.com/ankane/thundersvm-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/thundersvm-ruby/actions)
+[![Build Status](https://github.com/ankane/thundersvm-ruby/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/thundersvm-ruby/actions)
 
 ## Installation
 
