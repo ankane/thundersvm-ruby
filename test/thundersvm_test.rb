@@ -70,7 +70,7 @@ class ThunderSVMTest < Minitest::Test
   end
 
   def test_numo
-    skip if RUBY_PLATFORM == "java"
+    skip if ["jruby", "truffleruby"].include?(RUBY_ENGINE)
 
     x = Numo::DFloat.cast([[1, 2], [3, 4], [5, 6], [7, 8]])
     y = Numo::Int32.cast([1, 1, 2, 2])
