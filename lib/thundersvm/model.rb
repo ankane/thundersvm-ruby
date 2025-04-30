@@ -159,9 +159,11 @@ module ThunderSVM
 
     def str_ptr(arr)
       ptr = Fiddle::Pointer.malloc(Fiddle::SIZEOF_VOIDP * arr.size, Fiddle::RUBY_FREE)
-      arr.each_with_index do |v, i|
-        ptr[i * Fiddle::SIZEOF_VOIDP, Fiddle::SIZEOF_VOIDP] = Fiddle::Pointer["#{v}\x00"].ref
+      str_ptrs = arr.map { |v| Fiddle::Pointer["#{v}\x00"] }
+      str_ptrs.each_with_index do |v, i|
+        ptr[i * Fiddle::SIZEOF_VOIDP, Fiddle::SIZEOF_VOIDP] = v.ref
       end
+      ptr.instance_variable_set(:@thundersvm_refs, str_ptrs)
       ptr
     end
 
