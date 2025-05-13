@@ -1,9 +1,21 @@
 module ThunderSVM
   class Model
-    def initialize(svm_type: :c_svc, kernel: :rbf, degree: 3, gamma: nil, coef0: 0,
-      c: 1, nu: 0.5, epsilon: 0.1, max_memory: 8192, tolerance: 0.001,
-      probability: false, gpu: 0, cores: nil, verbose: nil)
-
+    def initialize(
+      svm_type: :c_svc,
+      kernel: :rbf,
+      degree: 3,
+      gamma: nil,
+      coef0: 0,
+      c: 1,
+      nu: 0.5,
+      epsilon: 0.1,
+      max_memory: 8192,
+      tolerance: 0.001,
+      probability: false,
+      gpu: 0,
+      cores: nil,
+      verbose: nil
+    )
       @svm_type = svm_type.to_sym
       @kernel = kernel.to_sym
       @degree = degree
